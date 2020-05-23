@@ -6,26 +6,47 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".room.RoomActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/addDataBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Data" />
+        <Button
+            android:id="@+id/updateDataBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Data" />
+        <Button
+            android:id="@+id/deleteDataBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Data" />
+        <Button
+            android:id="@+id/queryDataBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qyery User" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/addDataBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add Data" />
-    <Button
-        android:id="@+id/updateDataBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Update Data" />
-    <Button
-        android:id="@+id/deleteDataBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Delete Data" />
-    <Button
-        android:id="@+id/queryDataBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Qyery User" />
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/addBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加书" />
+        <Button
+            android:id="@+id/queryBooks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看所有书" />
+    </LinearLayout>
 </LinearLayout>

@@ -5,9 +5,12 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import com.example.jetpacktest.R
+import com.example.jetpacktest.room.update.Book
 import kotlin.concurrent.thread
 
 class RoomActivity : AppCompatActivity() {
+
+    var i: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +41,23 @@ class RoomActivity : AppCompatActivity() {
             thread {
                 for (user in userDao.loadAllUsers()) {
                     Log.e("MainActivityx", user.toString())
+                }
+            }
+        }
+
+        val bookDao = AppDatabase.getDatabase(this).bookDao()
+        findViewById<Button>(R.id.addBook).setOnClickListener {
+            thread {
+                val book = Book("一本好书" + i, 180, "张三")
+                book.id = bookDao.findLastzBook().id + 1
+                bookDao.insertBook(book)
+                Log.e("MainActivityx", book.id.toString())
+            }
+        }
+        findViewById<Button>(R.id.queryBooks).setOnClickListener {
+            thread {
+                for (book in bookDao.loadAllBooks()) {
+                    Log.e("MainActivityx", book.toString())
                 }
             }
         }
