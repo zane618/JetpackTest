@@ -16,6 +16,7 @@ import com.example.jetpacktest.livedatabean.BeanLivedataActivity
 import com.example.jetpacktest.room.RoomActivity
 import com.example.jetpacktest.viewmodel.MainViewModel
 import com.example.jetpacktest.viewmodel.MainViewModelFactory
+import com.example.jetpacktest.workmanager.WorkManagerActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -63,6 +64,10 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.go_room).setOnClickListener {
                 v ->
             startActivity(Intent(this, RoomActivity::class.java))
+        }
+        findViewById<Button>(R.id.go_wordManager).setOnClickListener {
+                v ->
+            startActivity(Intent(this, WorkManagerActivity::class.java))
         }
     }
 

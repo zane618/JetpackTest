@@ -47,6 +47,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="go room activity" />
+        android:text="room的使用" />
+
+    <Button
+        android:id="@+id/go_wordManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="WordManager的使用" />
 
 </LinearLayout>

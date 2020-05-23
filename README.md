@@ -1,5 +1,5 @@
 # Jectpack使用
-各个模块的memo所在的包目录如下：
+各个模块的demo所在的包目录如下：
 
 ## lifecyclers 简单绑定生命周期
 com.example.jetpacktest.lifecyclers
