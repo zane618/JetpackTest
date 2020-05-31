@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.edit
 import androidx.lifecycle.ViewModelProvider
+import com.example.jetpacktest.astudy.event.EventActivity
 import com.example.jetpacktest.lifecyclers.MyObserver
 import com.example.jetpacktest.livedata.LiveDataActivity
 import com.example.jetpacktest.livedatabean.BeanLivedataActivity
@@ -69,6 +70,10 @@ class MainActivity : AppCompatActivity() {
                 v ->
             startActivity(Intent(this, WorkManagerActivity::class.java))
         }
+        findViewById<Button>(R.id.go_eventActivity).setOnClickListener {
+                v ->
+            startActivity(Intent(this, EventActivity::class.java))
+        }
     }
 
     private fun refreshCount() {
@@ -80,5 +85,10 @@ class MainActivity : AppCompatActivity() {
         sp.edit {
             putInt("count_reserved", viewModel.counter)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        startActivity(Intent(this, EventActivity::class.java))
     }
 }

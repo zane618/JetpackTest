@@ -14,3 +14,5 @@ com.example.jetpacktest.livedatabean
 com.example.jetpacktest.room
 ## workmanager 定时、周期性任务
 com.example.jetpacktest.workmanager
+## Android事件分发
+com.example.jetpacktest.astudy.event

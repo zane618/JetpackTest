@@ -55,5 +55,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="WordManager的使用" />
+    <Button
+        android:id="@+id/go_eventActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="事件分发" />
 
 </LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.example.jetpacktest.astudy.event.viewgroup.ViewGroupA
+        android:id="@+id/viewGroupA"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:focusableInTouchMode="true"
+        android:background="@android:color/holo_red_dark"
+        android:orientation="vertical">
+
+        <com.example.jetpacktest.astudy.event.viewgroup.ViewGroupB
+            android:id="@+id/viewGroupB"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:focusableInTouchMode="true"
+            android:background="@android:color/holo_blue_dark"
+            android:orientation="vertical">
+
+            <com.example.jetpacktest.astudy.event.viewgroup.MyView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:clickable="true"
+                android:background="@android:color/holo_orange_dark"/>
+
+        </com.example.jetpacktest.astudy.event.viewgroup.ViewGroupB>
+    </com.example.jetpacktest.astudy.event.viewgroup.ViewGroupA>
+</layout>
