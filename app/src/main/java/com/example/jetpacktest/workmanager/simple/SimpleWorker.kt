@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import androidx.work.Worker
 import androidx.work.WorkerParameters
+import cn.zane.probase.util.LogPrintUtil
 import com.example.jetpacktest.workmanager.TAG
 
 /**
@@ -13,6 +14,7 @@ class SimpleWorker(context: Context, params: WorkerParameters): Worker(context, 
 
     override fun doWork(): Result {
         Log.e(TAG, "do work in SimpleWorker")
+        LogPrintUtil.zhangshi(System.currentTimeMillis().toString())
         return Result.success()
     }
 }

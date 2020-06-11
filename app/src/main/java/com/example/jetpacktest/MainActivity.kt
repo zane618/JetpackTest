@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.core.content.edit
 import androidx.lifecycle.ViewModelProvider
 import com.example.jetpacktest.astudy.event.EventActivity
+import com.example.jetpacktest.astudy.service.MyService
 import com.example.jetpacktest.lifecyclers.MyObserver
 import com.example.jetpacktest.livedata.LiveDataActivity
 import com.example.jetpacktest.livedatabean.BeanLivedataActivity
@@ -18,6 +19,7 @@ import com.example.jetpacktest.room.RoomActivity
 import com.example.jetpacktest.viewmodel.MainViewModel
 import com.example.jetpacktest.viewmodel.MainViewModelFactory
 import com.example.jetpacktest.workmanager.WorkManagerActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -74,6 +76,14 @@ class MainActivity : AppCompatActivity() {
                 v ->
             startActivity(Intent(this, EventActivity::class.java))
         }
+        findViewById<Button>(R.id.startservice).setOnClickListener {
+                v ->
+            startService(Intent(this, MyService::class.java))
+        }
+        findViewById<Button>(R.id.stopservice).setOnClickListener {
+                v ->
+            stopService(Intent(this, MyService::class.java))
+        }
     }
 
     private fun refreshCount() {
@@ -89,6 +99,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        startActivity(Intent(this, EventActivity::class.java))
+//        startActivity(Intent(this, EventActivity::class.java))
     }
 }
