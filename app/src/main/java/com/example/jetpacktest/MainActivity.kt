@@ -12,6 +12,7 @@ import androidx.core.content.edit
 import androidx.lifecycle.ViewModelProvider
 import com.example.jetpacktest.astudy.event.EventActivity
 import com.example.jetpacktest.astudy.service.MyService
+import com.example.jetpacktest.astudy.service.ServiceActivity
 import com.example.jetpacktest.lifecyclers.MyObserver
 import com.example.jetpacktest.livedata.LiveDataActivity
 import com.example.jetpacktest.livedatabean.BeanLivedataActivity
@@ -78,11 +79,7 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.startservice).setOnClickListener {
                 v ->
-            startService(Intent(this, MyService::class.java))
-        }
-        findViewById<Button>(R.id.stopservice).setOnClickListener {
-                v ->
-            stopService(Intent(this, MyService::class.java))
+            startActivity(Intent(this, ServiceActivity::class.java))
         }
     }
 
