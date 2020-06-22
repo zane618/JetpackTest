@@ -24,4 +24,15 @@ interface UserDao {
 
     @Query("delete from User where lastName = :lastName")
     fun deleteUserByLastName(lastName: String): Int
+
+
+    @Query("select * from User order by id desc limit 3 ")
+    fun loadLast3() : List<User>
+
+    /**
+     * 删除start和end之间的数据（包含start和end
+     */
+    @Query("delete from User where id >= :start & id <= :end")
+    fun deleteRange(start: Long, end: Long): Int
+
 }

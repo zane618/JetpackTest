@@ -1,5 +1,6 @@
 package com.example.jetpacktest.room
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -60,6 +61,10 @@ class RoomActivity : AppCompatActivity() {
                     Log.e("MainActivityx", book.toString())
                 }
             }
+        }
+
+        findViewById<Button>(R.id.room2).setOnClickListener {
+            startActivity(Intent(this, Room2::class.java))
         }
 
     }

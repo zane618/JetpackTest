@@ -16,6 +16,7 @@ import com.example.jetpacktest.astudy.service.ServiceActivity
 import com.example.jetpacktest.lifecyclers.MyObserver
 import com.example.jetpacktest.livedata.LiveDataActivity
 import com.example.jetpacktest.livedatabean.BeanLivedataActivity
+import com.example.jetpacktest.room.Room2
 import com.example.jetpacktest.room.RoomActivity
 import com.example.jetpacktest.viewmodel.MainViewModel
 import com.example.jetpacktest.viewmodel.MainViewModelFactory
@@ -96,6 +97,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-//        startActivity(Intent(this, EventActivity::class.java))
+        startActivity(Intent(this, Room2::class.java))
     }
 }
