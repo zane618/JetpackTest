@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.edit
 import androidx.lifecycle.ViewModelProvider
+import com.example.jetpacktest.astudy.alarmmanager.AlarmActivity
 import com.example.jetpacktest.astudy.at.AtActivity
 import com.example.jetpacktest.astudy.event.EventActivity
 import com.example.jetpacktest.astudy.service.MyService
@@ -58,30 +59,30 @@ class MainActivity : AppCompatActivity() {
         })
         refreshCount()
 
-        findViewById<Button>(R.id.go_live_data).setOnClickListener {
-            v ->
+        findViewById<Button>(R.id.go_live_data).setOnClickListener { v ->
             startActivity(Intent(this, LiveDataActivity::class.java))
         }
 
-        findViewById<Button>(R.id.go_bean_live_data).setOnClickListener {
-                v ->
+        findViewById<Button>(R.id.go_bean_live_data).setOnClickListener { v ->
             startActivity(Intent(this, BeanLivedataActivity::class.java))
         }
-        findViewById<Button>(R.id.go_room).setOnClickListener {
-                v ->
+        findViewById<Button>(R.id.go_room).setOnClickListener { v ->
             startActivity(Intent(this, RoomActivity::class.java))
         }
-        findViewById<Button>(R.id.go_wordManager).setOnClickListener {
-                v ->
+        findViewById<Button>(R.id.go_wordManager).setOnClickListener { v ->
             startActivity(Intent(this, WorkManagerActivity::class.java))
         }
-        findViewById<Button>(R.id.go_eventActivity).setOnClickListener {
-                v ->
+        findViewById<Button>(R.id.go_eventActivity).setOnClickListener { v ->
             startActivity(Intent(this, EventActivity::class.java))
         }
-        findViewById<Button>(R.id.startservice).setOnClickListener {
-                v ->
+        findViewById<Button>(R.id.startservice).setOnClickListener { v ->
             startActivity(Intent(this, ServiceActivity::class.java))
+        }
+        findViewById<Button>(R.id.startAtActivity).setOnClickListener { v ->
+            startActivity(Intent(this, AtActivity::class.java))
+        }
+        findViewById<Button>(R.id.startAlarmActivity).setOnClickListener { v ->
+            startActivity(Intent(this, AlarmActivity::class.java))
         }
     }
 
@@ -98,6 +99,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        startActivity(Intent(this, AtActivity::class.java))
+//        startActivity(Intent(this, AtActivity::class.java))
     }
 }

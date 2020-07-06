@@ -68,5 +68,17 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="启动service" />
+    <Button
+        android:id="@+id/startAtActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="At控件" />
+    <Button
+        android:id="@+id/startAlarmActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="AlarmManager" />
 
 </LinearLayout>
