@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.edit
 import androidx.lifecycle.ViewModelProvider
+import com.example.jetpacktest.astudy.at.AtActivity
 import com.example.jetpacktest.astudy.event.EventActivity
 import com.example.jetpacktest.astudy.service.MyService
 import com.example.jetpacktest.astudy.service.ServiceActivity
@@ -97,6 +98,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        startActivity(Intent(this, Room2::class.java))
+        startActivity(Intent(this, AtActivity::class.java))
     }
 }
